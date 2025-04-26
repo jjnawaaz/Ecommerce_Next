@@ -8,6 +8,7 @@ import {
   XMarkIcon,
 } from "@heroicons/react/24/outline";
 import { Button } from "./ui/button";
+import Image from "next/image";
 
 export const NavBar = () => {
   const [mobileOpen, setMobileOpen] = useState<boolean>(false);
@@ -28,7 +29,15 @@ export const NavBar = () => {
       <nav className="sticky top-0 z-50 bg-[#F2E2B1] shadow">
         <div className="container mx-auto flex items-center justify-between px-4 py-4">
           <Link href="/" className="hover:text-[#BDB395]">
-            Ecommerce Site
+            <div className="flex gap-2 items-center">
+              <Image
+                src="/logo.svg"
+                width={20}
+                height={10}
+                alt="Picture of the author"
+              />
+              <span className="mt-1 font-bold text-lg ">Ecommerce</span>
+            </div>
           </Link>
           <div className="hidden md:flex space-x-6">
             <Link href="/" className="hover:text-[#BDB395]">
@@ -65,18 +74,18 @@ export const NavBar = () => {
         </div>
         {mobileOpen && (
           <nav className="md:hidden bg-[#F6F0F0] shadow-md">
-            <ul className="flex flex-col p-4 space-y-2">
-              <li>
+            <ul className="flex flex-col p-4 space-y-2 font-bold">
+              <li className="flex justify-center">
                 <Link href="/" className="block hover:text-[#BDB395]">
                   Home
                 </Link>
               </li>
-              <li>
+              <li className="flex justify-center">
                 <Link href="/products" className="block hover:text-[#BDB395]">
                   Products
                 </Link>
               </li>
-              <li>
+              <li className="flex justify-center">
                 <Link href="/checkout" className="block hover:text-[#BDB395]">
                   Checkout
                 </Link>
