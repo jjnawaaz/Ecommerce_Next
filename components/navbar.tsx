@@ -36,10 +36,10 @@ export const NavBar = () => {
                 height={10}
                 alt="Picture of the author"
               />
-              <span className="mt-1 font-bold text-lg ">Ecommerce</span>
+              <span className="mt-1 font-extrabold text-lg ">Ecommerce</span>
             </div>
           </Link>
-          <div className="hidden md:flex space-x-6">
+          <div className="hidden md:flex space-x-6 font-semibold">
             <Link href="/" className="hover:text-[#BDB395]">
               Home
             </Link>
